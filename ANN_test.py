@@ -96,7 +96,7 @@ print(ann.predict(sc.transform([[1., 0., 0., 600, 1, 40, 3, 60000, 2, 1, 1, 5000
 # Important note 2: Notice also that the "France" country was not input as a string in the last column but as "1, 0, 0" in the first three columns. That's because of course the predict method expects the one-hot-encoded values of the state, and as we see in the first row of the matrix of features X, "France" was encoded as "1, 0, 0". And be careful to include these values in the first three columns, because the dummy variables are always created in the first columns.
 # """
 #
-# # Predicting the Test set results, logistic
+# # Predicting the Test set results, logistic 범주형 데이터 예측
 y_pred = ann.predict(X_test)
 y_pred = (y_pred > 0.5)
 print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
