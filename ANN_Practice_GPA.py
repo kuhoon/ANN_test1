@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv('gpascore.csv') #pandas로 엑셀파일 불러오기, 전처리 과정, data는 데이터프레임
+data = pd.read_csv('GPA.csv') #pandas로 엑셀파일 불러오기, 전처리 과정, data는 데이터프레임
 #print(data.isnull().sum())#빈 데이터를 검색
 data = data.dropna() #빈 행이 있다면 제거
 #data.fillna(100) #빈 행을 100으로 채워라. 이건 내가 임의 설정
